@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>আমার যত অধিকার।</title>
+      {% load staticfiles %}
+    <link href="{% static 'bootstrap.css' %}" rel="stylesheet"/>
+    <link href="{% static 'style.css' %}" rel="stylesheet"/>
+
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12 col-md-12">
+          {% block content %}
+
+          {% endblock %}
+
+      </div>
+    </div>
+</div>
+
+    <script src="{% static 'jquery.js' %}"></script>
+    <script src="{% static 'bootstrap.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>ধন্যবাদ,আপনার অভিযোগ পাঠানো হয়েছে। আপনার অভিযোগ আইডি <strong>{{ovizog }}</strong> । আইডিটি সংগ্রহে রাখুন </h2>
+    <<a class="btn btn-primary btn-lg btn-block" href="{% url 'home' %}">ফিরে যান </a>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<form class="form-group" action="{% url 'login' %}" method="POST">{% csrf_token %}
+
+            <h2 class="text-info">জাতীয় পরিচয়পত্রের নম্বর দিন </h2>
+          <input class="form-control" type="text" name="nid"/>
+            <h2 class="text-info">আপনার ওয়ার্ড নম্বর </h2>
+            <input class="form-control" type="text" name="word"/>
+            <br><br>
+        <input class="btn btn-primary btn-lg btn-block col-sm-6" type="submit" value="প্রবেশ করুন">
+
+        </form>
+        <br/>   <br/>
+        <a class="btn btn-primary btn-lg btn-block col-sm-6" href="{% url 'home' %}">ফিরে যান</a>
+{% endblock %}

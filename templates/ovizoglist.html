@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+{% if data %}
+    {% for data in data %}
+        <h2>আপনার অভিযোগ আইডি {{ data|stringformat:"i" }} ,প্রক্রিয়াধীন আছে।</h2>
+    {% endfor %}
+{% endif %}
+
+
+<a class="btn btn-primary btn-lg btn-block" href="{% url 'home' %}">ফিরে যান  </a>
+{% endblock %}

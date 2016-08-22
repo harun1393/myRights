@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if prob %}
+        <ul>
+        {% for pro in prob %}
+
+     <h4>আপনার কাছে আসা অভিযোগসমুহঃ <li>{{ pro }}</li></h4>
+        {% endfor %}
+            </ul>
+    {% else %}
+    <p>আপনার কাছে এখন কোন অভিযোগ নেই</p>
+
+
+    {% endif %}
+     <a class="btn btn-primary btn-lg btn-block col-sm-6" href="{% url 'home' %}">ফিরে যান</a>
+{% endblock %}

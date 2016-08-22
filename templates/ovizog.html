@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 style="margin-left:20px;">আপনার অভিযোগ লিখুন</h2>
+
+    <form class="form-group" action="{% url 'ovizog' %}" method="POST">{% csrf_token %}
+        <div class="from-group">
+        <input class="form-control" type="text" name="description" style="height:60"/>
+        <h2 class="text-info">কার কাছে অভিযোগ করবেন? </h2>
+            <input  type="radio" name="authority" value="chairman" checked> চেয়ারম্যান<br>
+            <input  type="radio" name="authority" value="membor" > মেম্বর <br>
+            <input  type="radio" name="authority" value="membor" > উপজেলা চেয়ারম্যান <br>
+            <h2 class="text-info">জাতীয় পরিচয়পত্রের নম্বর দিন </h2>
+          <input class="form-control" type="text" name="nid"/>
+            <h2 class="text-info">আপনার ওয়ার্ড নম্বর দিন </h2>
+          <input class="form-control" type="text" name="word"/>
+            <br>
+        <input class="btn btn-primary btn-lg btn-block col-sm-6" type="submit" value="এগিয়ে যান ">
+
+        </form>
+<a class="btn btn-primary btn-lg btn-block col-sm-6" href="{% url 'home' %}">ফিরে যান</a>
+    </div>
+
+{% endblock %}
+
+<!---
+<textarea class="from-control" style="margin:8px"  id="comment" rows="10" cols="40"></textarea>
+	  </label>
+	  <h2 style="margin-left:5px;">জাতীয় পরিচয় পত্রের নাম্বার</h2>
+        <label for="comment">
+	        <textarea class="from-control" style="margin:8px" id="comment" rows="2" cols="40"></textarea>
+	  </label>-->

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center text-info">আমার যত অধিকার </h1>
+<h2 class="text-center text-info">নাগরিক সুবিধা সমুহ</h2>
+
+{% for i in category %}
+    <a class="btn btn-primary btn-lg btn-block" href="{% url 'category' i.id %}">{{ i.title }}</a>
+
+{% endfor%}
+
+<a class="btn btn-primary btn-lg btn-block" href="{% url 'login' %}">আপনার অভিযোগসমুহ </a>
+{% endblock %}
+

@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+
+
+        {% for i in info %}
+       <h2 class="middle">{{ i.title }}</h2>
+        <p class="middle">{{ i.description }}</p>
+{% endfor%}
+        <br><br>
+        <h3>আপনি কি বর্নিত সুবিধা থেকে বঞ্চিত? </h3>
+        <a class="btn btn-primary btn-lg btn-block col-sm-6 col-md-6" href="{% url 'ovizog' %}">অভিযোগ করুন</a>
+        <a class="btn btn-primary btn-lg btn-block col-sm-6 col-md-6" href="{% url 'home' %}">ফিরে যান</a>
+
+    </div>
+
+
+
+
+{% endblock %}
+
